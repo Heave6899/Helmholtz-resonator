@@ -1,0 +1,76 @@
+<html>
+  <head><link rel="stylesheet" type="text/css" href="css/accordion.css">
+    <link rel="stylesheet" href="css/chartist.min.css">
+          <link rel="stylesheet" type="text/css"  href="css/button.css">
+          <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  </head>
+<script src="js/chartist.min.js"></script>
+<script src="js/sound.js"></script>
+<script src="js/chartist.js"></script>
+<script src="js/chartist-plugin-axistitle.min.js"></script>
+<script src="js/chartist-plugin-axistitle.js"></script>
+<body>
+  <div id="startdiv" style="float:left;width:30%">
+    <button class="accordion">Observation Table</button>
+    <div class="panel">
+      <input type="button" class="btn from-left" value="Start Animation" onclick="startanimation();" id="start"/>
+      <input type="button"  class="" onclick="startcount();" value="start timer" id="volstart" hidden="hidden"/>&nbsp;
+      <input type="button" onclick="stopcount();"  class="" value="stop timer" id="volstop" hidden="hidden"/>
+      <!--<input type="button" onclick="play();"  class="" value="play sound" id="sound" hidden="hidden"/>-->
+      <input type="button" value="Add Observation" onclick="cal();"  class="" hidden="hidden" id="addobv" />
+      <table id="tb1" class="highlight">
+          <tr>
+              <th style="font-size:11px">Volume of water drained<br>(V) X10<sup>-6</sup>m<sup>3</sup></th>  
+              <th style="font-size:11px">(1/V)<sup>1/2</sup></th>  
+              <th style="font-size:11px">f(hz)<br>EXPT</th>
+              <th style="font-size:11px">f(hz)<br> Thet<br> Before correction</th>
+              <th style="font-size:11px">f(hz)<br> Thet<br> After correction</th>
+          </tr>
+      </table>
+    </div>
+    <button class="accordion">Observation Values of the beaker</button>
+    <div class="panel">
+        
+        <table>
+            <tr>
+                <th>Temperature</th>&nbsp;<td>&nbsp;<input type="text" id="temp" width="50px"/></td>
+              </tr>
+            <tr>
+                <th>Velocity of Sound(c)<br>at Room Temperature</th>&nbsp;<td>&nbsp;<input type="text" id="velsound" width="50px"/></td>
+              </tr>
+            <tr>
+                <th>Neck Length of Apparatus</th>&nbsp;<td>&nbsp;<input type="text" step='0.01' value='0.00' id="lengthneck" width="50px"/></td>
+              </tr>
+              <tr> 
+                  <th>Neck Area(in cm<sup>2</sup>)</th>&nbsp;<td>&nbsp;<input type="text" step='0.01' value='0.00' width="50px" id="neckarea"/></td>
+                </tr>
+                <tr>
+                    <th>Neck Volume</th>&nbsp;<td>&nbsp;<input type="text" step='0.01' value='0.00' id="neckvol" width="50px"/></td>
+                  </tr>
+              <tr>
+                <th>DSO Frequency</th>&nbsp;<td>&nbsp;<input type="text" step='0.01' value='0.00' id="freqtext" width="50px"/></td>
+              </tr>
+              <tr>
+                <th>Corrected Length</th>&nbsp;<td>&nbsp;<input type="text" id="lengthmod" width="50px"/></td>
+              </tr>
+        </table>
+    </div>
+    <button class="accordion">Plot graph</button>
+    <div class="panel" align="center">
+      <input type="button"  class="btn from-left" onclick="plotgraph();" value="Plot graph"/>
+      <input type="button"  class="btn from-left" onclick="getlength();" value="Get Length"/>
+        <div class="ct-chart1 ct-perfect-fourth"></div>
+        
+    </div>
+  </div><div style="width:40px"></div>
+    <div id="canvas" style="float:left; width:70%;height:auto" >
+      <canvas id="mycanvas" width="0" height="0" style="border:none;">
+      </canvas><br/></div>
+  </div>
+    <script src="js/animation.js"></script>
+<script src="js/accordion.js"></script>
+
+<script type="text/javascript" src="js/materialize.min.js"></script>
+</body>
+
+</html>
