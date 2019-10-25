@@ -75,4 +75,4 @@ Corrected length of the neck(L’)=(mthet/mexpt)^2L
  
  
 ### 5. Storyboard :
-Storyboard: <a href="Storyboard/storyboard.gif"> [here]</a>
+Storyboard: <a href="storyboard/storyboard.gif"> [here]</a>
