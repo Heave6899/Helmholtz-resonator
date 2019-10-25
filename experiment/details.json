@@ -1,0 +1,10 @@
+{
+
+	"Experiment": "Helmholtz Experiment",                // Write your experiment name inside the quotes
+	"Lab": "Physical Sciences",                       // Write your lab name inside the quotes
+	"Discipline": "Physics",                // Write discipline name to which experimet belongs inside the quotes
+	"Institute": "Nirma University",                 // Write your institute name inside the quotes
+	"InstituteAcronym": "ITNU"           // Write acronym of the institute inside the quotes
+	"Author": "Tanuj Gupta"					// Write name of the developer inside the quotes
+	"Technology": "css, html, js"				// Write technologies used inside the quotes
+}
