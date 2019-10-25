@@ -24,8 +24,8 @@ SrNo | Name | Faculty or Student | Department| Institute | Email id
 1 | Tanuj Gupta | Faculty | Electronic and Communication | Nirma University, Ahmedabad | tanuj.gupta@nirmauni.ac.in
 2 | Vansh Patel | Student | Information Technology | Nirma University, Ahmedabad |17bit119@nirmauni.ac.in
 3 | Rohan Maheshwari | Student | Information Technology | Nirma University, Ahmedabad |17bit095@nirmauni.ac.in
-4 | Janmay Bhatt | Student | Computer Science and Engineering | Nirma University, Ahmedabad |abc@example.com
-5 | Shivam | Student | Mechanical | Nirma University, Ahmedabad |abc@example.com
+4 | Janmay Bhatt | Student | Computer Science and Engineering | Nirma University, Ahmedabad |19e018@nirmauni.ac.in
+5 | Shivam Padmani | Student | Mechanical | Nirma University, Ahmedabad |19k051@nirmauni.ac.in
 
 
 <br>
