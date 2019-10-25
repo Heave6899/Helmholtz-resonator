@@ -3,7 +3,7 @@
 
 <br>
 <br>
-<b> Experiment ABCDEF Lab  <a name="top"></a> <br>
+<b> Helmholtz Resonator, Physical Sciences  <a name="top"></a> <br>
 </p>
 
 <b>Discipline | <b>Physics
@@ -12,15 +12,15 @@
 <b> Experiment|     <b> 1. Helmholtz Resonator
 
 
-<h4> [1. Focus Area](#LO)
-<h4> [2. Learning Objectives ](#LO)
-<h4> [3. Instructional Strategy](#IS)
-<h4> [4. Task & Assessment Questions](#AQ)
-<h4> [5. Simulator Interactions](#SI)
+<h4> [1. Focus Area](#LO) </h4>
+<h4> [2. Learning Objectives ](#LO) </h4>
+<h4> [3. Instructional Strategy](#IS) </h4>
+<h4> [4. Task & Assessment Questions](#AQ) </h4>
+<h4> [5. Simulator Interactions](#SI) </h4>
 <hr>
 
 <a name="LO"></a>
-#### 1. Focus Area : Name of the Focus area as per handout
+#### 1. Focus Area : To find the resonance frequency of resonating cavity at different volume of a Helmholtz resonator and to verify the Helmholtz formula.
 
 #### 2. Learning Objectives and Cognitive Level
 
