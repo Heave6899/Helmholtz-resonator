@@ -71,11 +71,7 @@ Sr. No |	Learning Objective	| Task to be performed by <br> the student  in the s
 2.| Will learn about the structure<br> of Helmholtz resonator as<br> well as the Helmholtz<br> equation. |  Remember the equation, the<br>spring constant and answer<br> questions related to it. | 1)How does frequency of a Helmholtz resonator change?
 3.| Will be able to understand<br>the analogy between spring<br> mass oscillation and<br> compression of sound waves<br> in oscillator. | To obtain the formula of<br> frequency and to understand the<br> concept clearly. | 1)State the correct equation.<br>a) ω=(k/m)^1/3<br><b>b) ω=(k/m)^1/2</b><br>c)ω=(m/k)^1/2<br>d)ω=(km)^1/2
 4.| Will be able to apply the<br> correction in the neck length<br> to determine corrected<br> resonating volume of<br> the hollow cavity. | Will need to make the conclusion<br> table with the corrected neck<br> length and volume. | 1)We plot a graph for which <br>of the following?<br><b>a)1/V^½ vs. f</b><br>b)f vs. 1/V^1/2<br>c)1/V vs. f<br>d) none
-5.| Will be able to calculate frequency<br> by making use of the volume<br> noted. | Will fill up the observation<br> table column of theoretical frequency. | 1)Identify the correct equation.
-a)c/2π(A/VL)^1/2
-<b>b)c*2π(A/VL)^1/2</b>
-c)both
-d)none
+5.| Will be able to calculate frequency<br> by making use of the volume<br> noted. | Will fill up the observation<br> table column of theoretical frequency. | 1)Identify the correct equation.<br>a)c/2π(A/VL)^1/2<br><b>b)c*2π(A/VL)^1/2</b><br>c)both<br>d)none
 6.| Will be able to observe the<br> functioning of DSO and function <br>generator. | Will look for the maximum amplitude <br>in DSO in case if resonance <br>condition is achieved and note<br> the frequency displayed. They will also set the<br> required frequency in<br> function generator. | 1)Which of the following is<br> not a waveform obtained in DSO?<br>a)square<br>b)traingle<br>c)sine<br><b>d)octagon</b>
 7.| Will be able to plot graph of 1/V^1/2 v-s f and see the difference between the theoretical and experimental curves after neck correction. | Plot the graph of 1/V^1/2 v-s f and study the nature of graph to answer some questions. | 1)Mention the type of slope of the graph of 1V^1/2 vs. f.<br><b>a.postive</b><br>b.negative<br>c. no slope found<br>d. Depends on the process
 
