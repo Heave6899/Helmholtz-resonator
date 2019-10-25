@@ -1,6 +1,6 @@
 ## Storyboard (Round 2)
 
-Experiment 1: Name of the Experiment
+Experiment 1: Helmholtz Resonator
 
 ### 1. Story Outline:
 
