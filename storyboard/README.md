@@ -59,7 +59,7 @@ The setup will contain a lot of elements. Firstly we will keep a retort stand wh
 ##### 2.6 Conclusion:
 After making the neck correction, the theoretical and experimental curves nearly match with each other with very small deviation (less than 7 %), thus verifying the Helmholtz equation. The accuracy of the volume determination of separating funnel is excellent. The resonator behaves better when its volume is more than 150ml, being half the actual volume (300ml) of the funnel. Because of this, an attempt has been made to determine the volume by filling the resonator with marbles, sand and other liquids. The volume determined by filling small marbles was not accurate may because of the air gap between the marbles.
 
-##### 2.7 Equations/formulas: NA
+##### 2.7 Equations/formulas:
 Resonant frequency of the resonator(f)= c/2pi(A/VL)^1/2
 Slope of the graph of 1/V^1/2 v-s f (m expt)= c/2pi(A/L)^1/2
 Corrected length of the neck(L’)=(mthet/mexpt)^2L
