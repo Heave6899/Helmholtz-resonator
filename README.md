@@ -9,7 +9,7 @@
 
 <h5> About the Experiment : </h5> <br>
 
-Type here: berif description of this experiment
+Helmholtz resonance or wind throb is the phenomenon of air resonance in a cavity, such as when one blows across the top of an empty bottle. The name comes from a device created in the 1850s by Hermann von Helmholtz, the Helmholtz resonator, which he used to identify the various frequencies or musical pitches present in music and other complex sounds.
 
 <b>Name of Developer | <b> Tanuj Gupta
 :--|:--|
