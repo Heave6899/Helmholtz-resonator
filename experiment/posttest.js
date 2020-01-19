@@ -90,7 +90,7 @@
 
   const myQuestions = [
     {
-      question: " corrected length is ______________ than the theoretical length ",  ///// Write the question inside double quotes
+      question: " Corrected length is ______________ than the theoretical length. ",  ///// Write the question inside double quotes
       answers: {
         a: "Longer",                  ///// Write the option 1 inside double quotes
         b: "Shorter",                  ///// Write the option 2 inside double quotes

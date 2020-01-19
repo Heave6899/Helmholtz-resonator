@@ -2,10 +2,10 @@
 
 <br>
 
-<b>Discipline | <b>Physics
+<b>Discipline | <b>Physical Sciences
 :--|:--|
-<b> Lab | <b> Physical Sciences
-<b> Experiment|     <b> 1. Helmholtz Resonator
+<b> Lab | <b> Basic Physics Lab
+<b> Experiment|     <b> To find the resonance frequency of resonating cavity at different volume of a Helmholtz resonator and to verify the frequency from Helmholtz formula.
 
 <h5> About the Experiment : </h5> <br>
 

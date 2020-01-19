@@ -5,10 +5,8 @@ function play(){
 }
 function playNote(frequency, duration) {
     duration = duration / 1000;
-
     // create Oscillator node
     var oscillator = audioCtx.createOscillator();
-
     oscillator.type = 'sine';
     oscillator.frequency.value = frequency; // value in hertz
     oscillator.connect(audioCtx.destination);

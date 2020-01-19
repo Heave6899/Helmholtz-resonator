@@ -101,7 +101,7 @@
     },
 
     {
-     question: "Resonance frequency is inversely proportional to",  ///// Write the question inside double quotes
+     question: "Which of the follwing is resonance frequency inversely proportional to?",  ///// Write the question inside double quotes
       answers: {
         a: "√V",                  ///// Write the option 1 inside double quotes
         b: "V",                  ///// Write the option 2 inside double quotes
@@ -112,7 +112,7 @@
     },                                  ///// To add more questions, copy the section below 
     									                  ///// this line
     {
-      question: "Vibration of air in Helmholtz resonator can be considered analogous to",
+      question: "Vibration of air in Helmholtz resonator can be considered analogous to _____________.",
       answers: {
         a: "pulley- mass system",
         b: "spherical cavity",
@@ -123,7 +123,7 @@
     },
 
     {
-      question: "The expression of resonant frequency in a series resonant circuit is?",
+      question: "What is the expression of resonant frequency in a series resonant circuit is?",
       answers: {
         a: "1/(2π√C)",
         b: "1/( 2π√L)",

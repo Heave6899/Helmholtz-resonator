@@ -16,3 +16,10 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+/*function open(){
+  alert("okay");
+  document.getElementById("instructions").style.display = "block";
+}
+function close(){
+  document.getElementById("instructions").style.display = "none";
+}*/

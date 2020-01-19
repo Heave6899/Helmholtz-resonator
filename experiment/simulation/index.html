@@ -2,75 +2,201 @@
   <head><link rel="stylesheet" type="text/css" href="css/accordion.css">
     <link rel="stylesheet" href="css/chartist.min.css">
           <link rel="stylesheet" type="text/css"  href="css/button.css">
-          <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+                    <link rel="stylesheet" type="text/css"  href="css/modal.css">
+          <!--<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>-->
   </head>
 <script src="js/chartist.min.js"></script>
 <script src="js/sound.js"></script>
-<script src="js/chartist.js"></script>
+<script src="js/chartist-plugin-pointlabels.min.js"></script>
 <script src="js/chartist-plugin-axistitle.min.js"></script>
-<script src="js/chartist-plugin-axistitle.js"></script>
-<body>
-  <div id="startdiv" style="float:left;width:30%">
-    <button class="accordion">Observation Table</button>
-    <div class="panel">
-      <input type="button" class="btn from-left" value="Start Animation" onclick="startanimation();" id="start"/>
-      <input type="button"  class="" onclick="startcount();" value="start timer" id="volstart" hidden="hidden"/>&nbsp;
-      <input type="button" onclick="stopcount();"  class="" value="stop timer" id="volstop" hidden="hidden"/>
-      <!--<input type="button" onclick="play();"  class="" value="play sound" id="sound" hidden="hidden"/>-->
-      <input type="button" value="Add Observation" onclick="cal();"  class="" hidden="hidden" id="addobv" />
-      <table id="tb1" class="highlight">
-          <tr>
-              <th style="font-size:11px">Volume of water drained<br>(V) X10<sup>-6</sup>m<sup>3</sup></th>  
-              <th style="font-size:11px">(1/V)<sup>1/2</sup></th>  
-              <th style="font-size:11px">f(hz)<br>EXPT</th>
-              <th style="font-size:11px">f(hz)<br> Thet<br> Before correction</th>
-              <th style="font-size:11px">f(hz)<br> Thet<br> After correction</th>
-          </tr>
-      </table>
-    </div>
-    <button class="accordion">Observation Values of the beaker</button>
-    <div class="panel">
-        
-        <table>
+<script src="js/chartist-plugin-zoom.min.js"></script>
+<script src="js/animation.ob.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/mousefunction.js"></script>
+<script src="js/question.js"></script>
+
+<body style="padding-top:0px; margin: 0px;">
+  <div id="startdiv" style="float:right;background-color: #eee; position:absolute; height: 100%; margin-left:70%; width:30%;">
+  <div width="100%"></div>
+  <button class="accordion" id="acc1">Observation Values of the beaker</button>
+    <div class="panel" align="center" id="1" style="font-size:15px; display:block;">
+    
+        <table class="highlight">
             <tr>
-                <th>Temperature</th>&nbsp;<td>&nbsp;<input type="text" id="temp" width="50px"/></td>
+                <th>Temperature&nbsp;(&deg;C)</th>&nbsp;<td>&nbsp;<input type="text" id="temp" width="50px"/></td>
               </tr>
             <tr>
-                <th>Velocity of Sound(c)<br>at Room Temperature</th>&nbsp;<td>&nbsp;<input type="text" id="velsound" width="50px"/></td>
+                <th>Velocity of Sound(c) (m/s)<br>at Room Temperature</th>&nbsp;<td>&nbsp;<input type="text" id="velsound" width="50px" disabled/></td>
               </tr>
             <tr>
-                <th>Neck Length of Apparatus</th>&nbsp;<td>&nbsp;<input type="text" step='0.01' value='0.00' id="lengthneck" width="50px"/></td>
+                <th>Neck Length of Apparatus (cm)</th>&nbsp;<td>&nbsp;<input type="text" step='0.01' value='0.00' id="lengthneck" width="50px" disabled/></td>
               </tr>
               <tr> 
-                  <th>Neck Area(in cm<sup>2</sup>)</th>&nbsp;<td>&nbsp;<input type="text" step='0.01' value='0.00' width="50px" id="neckarea"/></td>
+                  <th>Neck Area(cm<sup>2</sup>)</th>&nbsp;<td>&nbsp;<input type="text" step='0.01' value='0.00' width="50px" id="neckarea" disabled/></td>
                 </tr>
                 <tr>
-                    <th>Neck Volume</th>&nbsp;<td>&nbsp;<input type="text" step='0.01' value='0.00' id="neckvol" width="50px"/></td>
+                    <th>Volume (cm<sup>3</sup>)</th>&nbsp;<td>&nbsp;<input type="text" step='0.01' value='0.00' id="neckvol" width="50px" disabled/></td>
                   </tr>
               <tr>
-                <th>DSO Frequency</th>&nbsp;<td>&nbsp;<input type="text" step='0.01' value='0.00' id="freqtext" width="50px"/></td>
+                <th>DSO Frequency (Hz)</th>&nbsp;<td>&nbsp;<input type="text" step='0.01' value='0.00' id="freqtext" width="50px" disabled/></td>
               </tr>
               <tr>
-                <th>Corrected Length</th>&nbsp;<td>&nbsp;<input type="text" id="lengthmod" width="50px"/></td>
+                <th>Corrected Length (cm)</th>&nbsp;<td>&nbsp;<input type="text" id="lengthmod" width="50px" disabled/></td>
+              </tr>
+              <tr>
+                <th>Enter the value of volume gap(cm<sup>3</sup>)</th>&nbsp;<td>&nbsp;<input type="text" id="volgap" width="50px"/></td>
+              </tr>
+              <tr>
+                  <td colspan="2" align="center"><input type="button" onclick="setvol()" id="volumegap" value="Click to set volgap" disabled></td>
+                  
               </tr>
         </table>
     </div>
-    <button class="accordion">Plot graph</button>
-    <div class="panel" align="center">
-      <input type="button"  class="btn from-left" onclick="plotgraph();" value="Plot graph"/>
-      <input type="button"  class="btn from-left" onclick="getlength();" value="Get Length"/>
-        <div class="ct-chart1 ct-perfect-fourth"></div>
-        
+    <button class="accordion" id="acc2" disabled>Input Parameters</button>
+    <div class="panel" align="center" id="2">
+    <p style="padding-left:10%; padding-right:10%; text-align: justify;">Use the input parameter function to calculate the theoretical frequency and input it into the observation table "Theoritcal freq Before Correction" column.</p>
+      <table>
+        <tr>
+          <th> Volume(cm<sup>3</sup>): </th> 
+          <td><input type="text" id="volumeleft" value="1200"></td>
+        </tr>
+        <tr>
+        <th> Area(cm<sup>2</sup>): </th> 
+          <td><input type="text" id="area" disabled></td>
+        </tr>
+        <tr>
+        <th> Radius(cm): </th> 
+          <td><input type="text" id="radius"></td>
+        </tr>
+        <tr>
+        <th> Length(cm): </th> 
+          <td><input type="text" id="length"></td>
+        </tr>
+        <tr>
+        <th> Resonating Frequency(hz): </th> 
+          <td><input type="text" id="freq" disabled></td>
+        </tr>
+        <tr> 
+          <td colspan="2" align="center"><input type="button" class="" value="Calculate Frequency" onclick="ques1()" id="volume"></td>
+        </tr>
+      </table>
     </div>
-  </div><div style="width:40px"></div>
-    <div id="canvas" style="float:left; width:70%;height:auto" >
-      <canvas id="mycanvas" width="0" height="0" style="border:none;">
+    <button class="accordion" id="observationtable" disabled/>Observation Table</button>
+    <div class="panel" id="3">
+    <img src="images/drop5.png" style="display:none" id="drop" />
+
+    <center>
+      <input type="button" value="Add Observation" onclick="cal();"  class="" id="addobv" hidden/>
+   <!--   <input type="button" onclick="play();"  class="" value="play sound" id="sound"/>-->
+
+      <br>
+      
+      <center>
+      <table id="tb1" class="highlight" hidden/>
+          <tr>
+              <th>Volume of water after drain<br>(V) X10<sup>-6</sup>m<sup>3</sup></th>  
+              <th>(1/V)<sup>1/2</sup></th>  
+              <th>f(hz)<br>EXPT</th>
+              <th>f(hz)<br> Theoretical Freq<br> Before correction</th>
+              <th>f(hz)<br> Theoretical Freq<br> After correction</th>
+          </tr>
+      </table>
+      </center>
+    </div>
+    
+    <button class="accordion" hidden id="plotgraphaccordion">Plot graph</button>
+    <div class="panel" align="center">
+      <input type="button"  class="" onclick="plotgraph();" value="Plot graph"/>
+      <input type="button"  class="" onclick="getlength();" value="Get Length"/>
+        <div class="ct-chart1 ct-perfect-fourth"></div>
+        <h6>Note: </h6><p>Orange: Theoretical, Red: Experimental, Yellow: After Length Correction</p>
+    </div>
+    <button class="accordion" id="inst">Instructions</button>
+    <div class="panel" id="instructions" style="font-size:15px;">
+    <ul>
+      <li> To start the experiment, the User will have to click on the respective parts of the setup to reveal the values in the observation values table.
+      <li> Input the values of temperature and volume gap in the obervation values table and click on CLICK TO SET VOLGAP button.
+      <li> Click on the stop cock to start and stop the flow of water from flask to the beaker.
+      <li> Now, input the paramters into the "Input Parameters table and click on CALCULATE FREQUENCY to input the resonant frequency calculated by the user into a textbox after the user correctly identifies the formula driving the experiment.
+      <li> Now use the dropdown menu to set the range of frequencies into the function generator and position the slider to check for resonance.
+      <li> The Resonance indicator will turn green on resonance and the user can click on the Play Sound button to play the resonant frequency.
+      <li> Repeat the obervations by clicking on ADD OBSERVATION button and repeat from step 5.
+      <li> Go to Plot Graph panel and click on GET LENGTH to get the corrected length after the user inputs the correct slope value into the textbox.
+      <li> Click on PLOT GRAPH button to generate a graph containing the graph of theoretical and experimental observations noted in the obseravtion table.
+    </ul>
+    </div>
+  </div>
+  </div>
+  <center><h1 style="font-size:300%;color: black;margin-right: 35%; margin-top: 5px;">HELMHOLTZ RESONATOR</h1></center>
+ <select oninput="showslider()" id="selection" hidden="hidden" style="position: absolute; margin-top:31%; margin-left:47%;">
+        <option value="1">0-580 Hz</option>
+        <option value="2">580-1120 Hz</option>
+        <option value="3">1120-1680 Hz</option>
+      </select>
+      <!--<p id="slidervalue" hidden></p>-->
+      <input type="range" value="50" min="0" max="100" class="myslider" id="slider"  style="position: absolute; width:150px;  margin-top:22.4%; margin-left: 47%;" oninput="frequencynear()" onchange="frequencynear()" hidden="hidden"/>
+      </center> 
+      </div>
+              <p style="position: absolute; margin-left:29%; margin-top:11%;">Volume left:&nbsp;<input type="text" id="volumevalue"  value="1200" disabled style="width:40px;"/></p>
+
+
+
+
+<p style="margin-top:0%;margin-left:45%; position: absolute; font-size:30px;" id="an1" class="colorchange">Identify the DSO!<br>And Click on it</p>
+<p style="margin-top:0%;margin-left:45%; position: absolute; font-size:30px;" hidden id="an2" class="colorchange">Identify Sine wave generator!<br>And Click on it</p>
+<p style="margin-top:0%;margin-left:45%; position: absolute; font-size:30px;" hidden id="an3" class="colorchange">Identify Speaker!<br>And Click on it</p>
+<p style="margin-top:0%;margin-left:45%; position: absolute; font-size:30px;" hidden id="an4" class="colorchange">Identify Seperating Funnel!<br>And Click on it</p>
+<p style="margin-top:0%;margin-left:45%; position: absolute; font-size:30px;" hidden id="an5" class="colorchange">Identify Graduating beaker!<br>And Click on it</p>
+<!--<p style="margin-top:0%;margin-left:45%; position: absolute; font-size:30px;" hidden id="an6" class="colorchange">Identify Stand!</p>-->
+
+<p style="margin-top:0%;margin-left:45%; position: absolute; font-size:30px;" hidden id="an7" class="colorchange">Identify neck to<br> display the length!</p>
+<p style="margin-top:0%;margin-left:45%; position: absolute; font-size:30px;" hidden id="an8" class="colorchange">Identify Opening Area<br>to display the area!</p>
+<p style="margin-top:0%;margin-left:45%; position: absolute; font-size:30px;" hidden id="an9" class="colorchange">Identify volume of<br>the beaker to display the Volume!</p>
+<p style="margin-top:27%;margin-left:36.5%; position: absolute; font-size:16px;" hidden id="an10" class="colorchange"> Click on<br>stop cock here</p>
+<p style="margin-top:35%;margin-left:46%; position: absolute; font-size:16px;" id="an11" class="colorchange" hidden> Click on dropdown to set range<br> of the slider above</p>
+<p style="margin-top:20%;margin-left:46%; position: absolute; font-size:16px;" id="an12" class="colorchange" hidden> Drag to check for resonance</p>
+<p style="margin-top:0%;margin-left:45%; position: absolute; font-size:16px;" id="an13" class="colorchange" hidden> Click on ADD OBSERVATION<br>to add observation<br> into table</p>
+
+    <div id="canvas" style="position:top;margin-right:30%;height:auto" >
+      <canvas id="mycanvas" width="900" height="700" style="border:none;" onload="startanimation()">
       </canvas><br/></div>
   </div>
+  
     <script src="js/animation.js"></script>
 <script src="js/accordion.js"></script>
+<!-- The Modal -->
+<div id="myModal" class="modal">
 
-<script type="text/javascript" src="js/materialize.min.js"></script>
+  <!-- Modal content -->
+  <div class="modal-content" style="font-size:20px;">
+    <p>1) The expression of resonant frequency is?<br> 
+    <input type="radio" name="option" value="a1" id="a1" onchange="a1()">a) (c/2π)√(A/VL)<br>
+    <input type="radio" name="option" value="b1" id="b1" onchange="b1()">b) (c*2π)√(A/VL)<br>
+    <input type="radio" name="option" value="c1" id="c1"onchange="c1()">c) both<br>
+    <input type="radio" name="option" value="d1" id="d1" onchange="d1()">d) none</p>
+    <p id="ans1"></p>
+    <input type="text" placeholder = "Theoretical Resonance Frequency" id = "textboxfreq" onchange="rightanswer()" hidden/>
+  </div>
+
+</div>
+<div id="myModal2" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <p>II.	Identify the Area opening port.</p>
+  </div>
+
+</div>
+<div id="myModal3" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <p>III.	Identify the volume of the cavity.</p>
+  </div>
+
+</div>
+<!--<script type="text/javascript" src="js/materialize.min.js"></script>-->
+
 </body>
 
 </html>
