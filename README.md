@@ -2,7 +2,7 @@
 
 <br>
 
-<b>Discipline | <b>Physical Sciences
+<b>Discipline | <b>Physical Sciences DEMO
 :--|:--|
 <b> Lab | <b> Basic Physics Lab
 <b> Experiment|     <b> To find the resonance frequency of resonating cavity at different volume of a Helmholtz resonator and to verify the frequency from Helmholtz formula.
